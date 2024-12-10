@@ -1,0 +1,15 @@
+###
+GET http://localhost:2121/sign-in
+### get home page
+
+GET  http://localhost:2121/
+### api end point post request
+POST http://localhost:2121/api/data
+Content-Type: application/json
+
+{
+    "name":"jose"
+}
+
+### delete s
+DELETE http://localhost:2121/api/data
