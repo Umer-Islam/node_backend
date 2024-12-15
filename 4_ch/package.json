@@ -1,5 +1,5 @@
 {
-  "name": "3_ch",
+  "name": "4_ch",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -10,10 +10,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "fullstack app that uses Nodejs backend, SQLite database and JWT authentication",
+  "description": "dockerized fullstack app that uses Nodejs backend, postgreSQL database, prisma ORM  and JWT authentication",
   "dependencies": {
+    "@prisma/client": "^6.0.1",
     "bcryptjs": "^2.4.3",
     "express": "^4.21.2",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "prisma": "^5.22.0"
   }
 }
