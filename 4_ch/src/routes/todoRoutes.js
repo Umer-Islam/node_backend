@@ -1,5 +1,6 @@
 import express from "express";
-import db from "../db.js";
+// import db from "../db.js";
+import prisma from "../prismaClient.js";
 import prisma from "../prismaClient.js";
 const router = express.Router();
 
@@ -26,7 +27,7 @@ router.put("/:id", async (req, res) => {
   const { completed } = req.body;
   const { id } = req.params;
   const { page } = req.query;
-  const updatedTodo = awit prisma.todo.update({
+  const updatedTodo = await prisma.todo.update({
     where:{
       id:parseInt(id),
       userId: req.userId
@@ -47,6 +48,7 @@ const deleteTodo = await prisma.todo.delete({
     userId
   }
 })
-  res.send({ message: "todo deleted" });
+  
+  res.send({ message: "todo deleted" },deleteTodo);
 });
 export default router;

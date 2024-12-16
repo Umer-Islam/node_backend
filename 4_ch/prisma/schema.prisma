@@ -10,21 +10,20 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
-
+  url      = env("DBURL")
 }
 
 model User {
-  id  Int @id @default(autoincrement())
-  username  String  @unique
+  id       Int    @id @default(autoincrement())
+  username String @unique
   password String
-  todos Todo[]
+  todos    Todo[]
 }
 
-model todos {
-id  Int @id @default(autoincrement())
-task String
-completed Boolean @default(false)
-userId  Int 
-user  User @relation(fields:[userId],references:[id])
+model Todo {
+  id        Int     @id @default(autoincrement())
+  task      String
+  completed Boolean @default(false)
+  userId    Int
+  user      User    @relation(fields: [userId], references: [id])
 }

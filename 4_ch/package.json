@@ -1,5 +1,5 @@
 {
-  "name": "4_ch",
+  "name": "chapter_4",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -10,13 +10,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "dockerized fullstack app that uses Nodejs backend, postgreSQL database, prisma ORM  and JWT authentication",
+  "description": "A dockerized full stack todo application that uses a NodeJS backend, a PostgreSQL database, a Prisma ORM, and JWT Authentication.",
   "dependencies": {
-    "@prisma/client": "^6.0.1",
+    "@prisma/client": "^5.22.0",
     "bcryptjs": "^2.4.3",
-    "express": "^4.21.2",
+    "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
-    "pg": "^8.13.1",
-    "prisma": "^5.22.0"
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "prisma": "^6.0.1"
   }
 }
